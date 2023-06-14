@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --text: #333;
+}
+
+#wrapper {
+}
+#header {
+  height: 50px;
+  background-color: var(--black);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* or
+  right: 0; 
+  left: 0; */
+  z-index: 1;
+}
+#nav,
+.sub-nav {
+  list-style: none;
+}
+#nav li {
+  display: inline-block;
+  position: relative;
+}
+
+#nav li a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  line-height: 50px;
+  padding: 0 24px;
+  display: inline-block;
+}
+
+#nav > li > a {
+  color: var(--white);
+}
+
+#nav li:hover > a {
+  background-color: #ccc;
+  color: var(--text);
+}
+
+#nav li:hover .sub-nav {
+  display: block;
+}
+
+#nav .sub-nav {
+  display: none;
+  min-width: 160px;
+  position: absolute;
+  /* Cách top 1 đoạn = chiều cao thẻ cha (li) */
+  top: 100%;
+  /* Cách left 1 đoạn = chiều rộng thẻ cha (li)
+  left: 100%; */
+  left: 0;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sub-nav * {
+  width: 100%;
+}
+
+#nav .sub-nav a {
+  color: var(--black);
+  padding: 0 16px;
+  line-height: 40px;
+}
+
+.search-btn {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 50px;
+  color: var(--white);
+  padding: 0 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search-btn:hover {
+  background-color: #f44336;
+}
+
+#slider {
+  /* Với giá trị %: 50% chiều ngang của chính nó */
+  padding-top: 50%;
+  /* margin-top: 50px; */
+  background-image: url(https://www.w3schools.com/w3images/chicago.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content {
+}
+#footer {
+}
